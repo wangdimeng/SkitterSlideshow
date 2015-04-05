@@ -1,3 +1,4 @@
+/*! skitter-slideshow by Thiago Silva Ferreira - v5.0.0 - 2015-04-05 */
 (function($, window, undefined) {
   "use strict";
   
@@ -55,3 +56,19 @@
 
   window.Skitter = Skitter;
 })(jQuery, window);
+
+(function(window, undefined) {
+  "use strict";
+  
+  var SkitterHelpers = {};
+
+  window.SkitterHelpers = SkitterHelpers;
+})(window);
+
+(function(window, undefined) {
+  "use strict";
+  
+  Skitter.prototype.animations.fade = function() {
+    console.log("fade animation");
+  };
+})(window);

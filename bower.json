@@ -1,0 +1,29 @@
+{
+  "name": "skitter-slideshow",
+  "author": "Thiago Silva Ferreira", 
+  "homepage": "http://skitter-slider.net", 
+  "version": "5.0.0",
+  "main": "dist/skitter.min.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "tests",
+    "*.md",
+    "index.html",
+    "config.rb",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "devDependencies": {
+    "jquery": ">= 2"
+  },
+  "keywords": [
+    "jquery",
+    "skitter",
+    "slideshow",
+    "slider",
+    "carousel",
+    "gallery",
+    "responsive"
+  ]
+}

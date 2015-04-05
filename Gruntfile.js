@@ -1,18 +1,33 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'), 
+    banner: '/*! <%= pkg.name %> by <%= pkg.author %> - v<%= pkg.version %> - ' +
+            '<%= grunt.template.today("yyyy-mm-dd") %> */' + "\n", 
+    concat: {
+      options: {
+        stripBanners: true,
+        banner: '<%= banner %>',
+        separator: "\n\n",
+      },
+      dist: {
+        src: [
+          'src/skitter.js', 
+          'src/utils/helpers.js', 
+          'src/animations/fade.js', 
+        ],
+        dest: 'dist/skitter.js',
+      },
+    }, // concat
+
     uglify: {
       options: {
         mangle: false, 
-        banner: '/*! <%= pkg.name %> by <%= pkg.author %> - v<%= pkg.version %> - ' +
-                '<%= grunt.template.today("yyyy-mm-dd") %> */'
+        banner: '<%= banner %>',
       },
       skitter: {
         files: {
           'dist/skitter.min.js': [
-            'src/skitter.js', 
-            'src/utils/helpers.js', 
-            'src/animations/fade.js', 
+            'dist/skitter.js'
           ]
         }
       }
@@ -37,7 +52,7 @@ module.exports = function(grunt) {
           'scss/*',
           'scss/**/*', 
         ],
-        tasks: ['compass', 'uglify:skitter'],
+        tasks: ['compass', 'concat', 'uglify'],
         options: {
           spawn: false,
         }
@@ -52,9 +67,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Tarefas que serao executadas
-  grunt.registerTask('default', ['compass', 'uglify']);
+  grunt.registerTask('default', ['compass', 'concat', 'uglify']);
 
   // Tarefa para watch
   grunt.registerTask('w', ['watch']);

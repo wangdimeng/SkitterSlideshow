@@ -1,27 +1,30 @@
 {
-  "name": "skitter",
+  "name": "skitter-slideshow",
   "version": "5.0.0",
   "description": "Slideshow for anytime, now responsive!",
   "main": "src/skitter.js",
   "devDependencies": {
-    "grunt": "latest", 
-    "grunt-contrib-uglify": "latest", 
-    "grunt-contrib-compass": "latest", 
-    "grunt-contrib-watch": "latest"
-  }, 
+    "grunt": "latest",
+    "grunt-contrib-uglify": "~0.8.1",
+    "grunt-contrib-compass": "~1.0.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-concat": "~0.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/thiagosf/SkitterSlideshow.git"
   },
   "keywords": [
+    "jquery",
+    "skitter",
     "slideshow",
     "slider",
     "carousel",
     "gallery",
     "responsive"
-  ], 
-  "author": "Thiago Silva Ferreira", 
-  "license": "MIT", 
+  ],
+  "author": "Thiago Silva Ferreira",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thiagosf/SkitterSlideshow/issues"
   },

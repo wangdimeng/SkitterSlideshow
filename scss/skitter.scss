@@ -2,5 +2,8 @@
   Skitter
 ---------------------------------------------*/
 .skitter {
-
+  position: relative;
+  .skitter-item {
+    position: absolute;
+  }
 }

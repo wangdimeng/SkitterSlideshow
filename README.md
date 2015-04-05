@@ -1,3 +1,4 @@
-# Skitter - Slideshow for anytime, now responsible!
+Skitter
+=======
 
-Start a new skitter, clean all =D
+Restart.
