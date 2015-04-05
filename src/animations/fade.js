@@ -1,5 +1,5 @@
 (function(window, undefined) {
-  "use strict";
+  'use strict';
   
   Skitter.prototype.animations.fade = function() {
     console.log("fade animation");

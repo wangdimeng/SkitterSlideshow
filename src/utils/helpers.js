@@ -1,7 +1,18 @@
 (function(window, undefined) {
-  "use strict";
+  'use strict';
   
-  var SkitterHelpers = {};
+  var Helpers = {};
 
-  window.SkitterHelpers = SkitterHelpers;
+  Helpers.Template = {
+    render: function(template, data) {
+      var i;
+      for (i in data) {
+        var regex = new RegExp("{{" + i + "}}", 'gi');
+        template = template.replace(regex, data[i]);
+      }
+      return template;
+    }
+  };
+
+  window.Helpers = Helpers;
 })(window);
